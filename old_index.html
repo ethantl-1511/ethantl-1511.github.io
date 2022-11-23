@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=device-width">
+		<title>Ethan LaRocca</title>
+        <link rel="shortcut icon" type="img/png" href="./assets/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+	</head>
+	<body>
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#Links">Links</a>
+        <a onclick="openForm()" ondblclick="closeform()" class="contact">Contact</a>
+    </div>
+
+    <!--Background video-->
+    <div id="Home">
+        <video autoplay muted loop id="Coding_Video">
+            <source src="./assets/videos/video-electronic.mp4" type="video/mp4">
+            <!--Display message if video fails-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Ethan LaRocca's Portfolio</h1>
+        <strong>
+            <p class="center">
+                Thank you for visiting!
+            </p>
+        </strong>
+    </div>
+
+    <!--Slideshow-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of _-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./assets/images/portrait.png" alt="Portrait">
+                    <div class="text"> I am a full-stack software developer! </div>
+                </div>
+                 <!-- Slide 2 of _-->
+                 <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./assets/images/01-HTMLCSSJS.jpg" alt="HTML, CSS, JavaScript">
+                    <div class="text"> I am experienced in <br>HTML, CSS, and Javascript. </div>
+                </div>
+                <!-- Slide 3 of _-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./assets/images/02-SQL.jpg" alt="SQL">
+                    <div class="text"> I've been trained for Databases and SQL. </div>
+                </div>  
+                <!-- Slide 4 of _-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./assets/images/03-Python.png" alt="Python">
+                    <div class="text"> Well-versed in Python. </div>
+                </div>    
+                <!-- Slide 5 of _-->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./assets/images/04-CNET.png" alt="C#, .NET">
+                    <div class="text"> Skilled in C#, .NET, ASP.NET, and MVC. </div>
+                </div>  
+                <!-- Slide 6 of _-->
+                <div class="mySlides fade">
+                    <a class="white-text contact" onclick="openForm()"><img class="Slideshow_Images" src="./assets/images/contact.png" alt=""></a>
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me!</a></div> 
+                </div>
+                <!--Previous/Next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Slideshow dots-->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+
+    <!--About-->
+    <div class="Row" id="About">
+        <!--Left column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am a software developer who enjoys the fun challenge of a programming puzzle!
+                <br><br>
+                I am a trained full-stack developer, experienced in HTML, CSS, JavaScript, SQL, Python, C# and more!
+                <br><br>
+                <a onclick="openForm()" class="contact">Contact me</a>! I can't wait to work with you.
+            </p>
+        </div>
+        <!--Right column-->
+		<div class="Column_2">
+			<img src="./assets/images/image1.png" alt="code wallpaper">
+		</div>
+    </div>
+
+    <!--Links-->
+    <div class="Row" id="Links">
+        <!--Left column-->
+	    <div class="Column_2">
+            <img src="./assets/images/image2.png" alt="python wallpaper"></a>
+        </div>
+        <!--Right Column-->
+        <div class="Column_1">
+            <h1>Links</h1>
+            <p class="center">
+                <a href="https://github.com/ethantl-1511/" target="_blank"><img class="icon" src="./assets/images/GitHub-1.png" alt="GitHub"></a>
+                <br>
+                <a href="https://www.linkedin.com/in/ethan-larocca/"><img class="icon" src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+            <p>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/mnqrglob" method="post" class="form-container">
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Name..." name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                  <input type="text" placeholder="Phone number..." name="phone">
+                <label for="email"><b>Email</b></label>		
+                  <input type="text" placeholder="Email address..." name="email" required>
+                <label for="message"><b>Message</b></label>
+                  <input type="text" placeholder="Message..." name="message">
+                
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p class="center">&copy; Ethan LaRocca 2022</p>
+    </footer>
+    <script src="./js/portfolio.js"></script>
+	</body>
+</html>
