@@ -25,11 +25,10 @@ a {
 }
 
 #aboutWords {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-img {
+.mainImages {
     filter: grayscale(75%);
     max-width: 100%; /* Ensures images stay within container */
     max-height: 100%; /* Ensures images stay within container */
@@ -37,14 +36,21 @@ img {
     margin: auto auto auto auto; /* Centers ALL images */
 }
 
-img:hover {
+.mainImages:hover {
     filter: grayscale(0%); /* Brings back color on hover */
     transition: 0.3s ease-in;
 }
 
-img:not(:hover) {
+.mainImages :not(:hover) {
     filter: grayscale(75%); /* Brings back color on hover */
     transition: 0.3s ease-in;
+}
+
+.cardImage {
+    max-width: 100%; /* Ensures images stay within container */
+    max-height: 100%; /* Ensures images stay within container */
+    display: block; /* By specifying block display we ensure images are able to be centered */
+    margin: auto auto auto auto; /* Centers ALL images */
 }
 
 footer {
@@ -61,7 +67,6 @@ footer {
 #carouselExampleCaptions {
     width: 29.5vw;
     height: auto;
-    padding-top: 4%;
     position: relative;
     margin: auto;
 }
@@ -82,7 +87,6 @@ footer {
     height: 12.5%;
     background-color: rgba(0,0,0,0.75);
 }
-
 
 /***
     Video Styling
@@ -359,24 +363,23 @@ button {
 }
 
 @media screen and (max-width: 1080px) {
-    .Navbar a{
+    .navbar a{
         width: 20%; /* Sets each navbar link to 1/5 of the navbar */
         font-size: 2.5vw;
     }
 }
 
 @media screen and (max-width: 1080px) {
-
     .white-text {
         font-size: 4.5vw;
     }
 }
 
 @media screen and (min-width: 1725px) {
-    .Column_1 {
+    .col1 {
         height: 550px;
     }
-    .Column_2 {
+    .col2 {
         height: 550px;
     }
 }
