@@ -14,7 +14,8 @@ document.addEventListener("click", function(event) // document listens for a "cl
             !event.target.closest(".Pop_Up_Button") &&
             !event.target.closest(".form-popup") &&
             !event.target.closest(".btn") &&
-            !event.target.closest(".contact"))
+            !event.target.closest(".contact") &&
+            !event.target.closest(".contactMe"))
         { // if you click on cancel, but DONT click on the others,
             closeForm()
         }
