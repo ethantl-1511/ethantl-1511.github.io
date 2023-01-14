@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ethan LaRocca</title>
+    <link rel="shortcut icon" type="img/png" href="./assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+</head>
+  <body>
+
+    <!-- Nav Bar -->
+    <div id="Home">
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#Home"><mh>Home</mh></a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-light" aria-current="page" href="#Slideshow"><mht>Slideshow</mht></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#About"><mht>About</mht></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#Links"><mht>Links</mht></a>
+              </li>
+              <li class="nav-item">
+                <a onclick="openContact()" ondblclick="closeContact()" class="contact nav-link text-light"><mht>Contact</mht></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!--Background video-->
+    <div>
+        <video autoplay muted loop id="Coding_Video">
+            <source src="./assets/videos/video-electronic.mp4" type="video/mp4">
+            <!--Display message if video fails-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Ethan LaRocca | Software Developer</h1>
+        <strong>
+            <p class="center">
+                Thank you for visiting!
+            </p>
+        </strong>
+    </div>
+    <br><br><br><br>
+      <!-- Images -->
+    <div id="Slideshow">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button> -->
+            </div>
+            <div id="imagecss" class="carousel-inner imagecss">
+            <div class="carousel-item active">
+                <img src="./assets/images/portrait.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> Hello, my name is Ethan LaRocca. I am a full-stack software developer! </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/01-HTMLCSSJS.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> I am experienced in HTML, CSS, and JavaScript. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/02-SQL.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> I've been trained with Databases and SQL. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/03-Python.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> Well-versed in Python, SQLite, and Django. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/images/04-CNET.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> Skilled in C#, .NET, ASP.NET, and MVC. </p>
+                </div>
+            </div>
+            <!-- <div class="carousel-item">
+                <img src="./assets/images/05-CUNREAL.png" class="d-block w-100 mainImages" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <p> Adept in C++ and Unreal Engine 5. </p>
+                </div>
+            </div> -->
+            <div class="carousel-item contactMe">
+                <a onclick="openForm()"><img src="./assets/images/contact.png" class="d-block w-100 mainImages" alt="..."></a>
+                <div class="carousel-caption d-none d-md-block">
+                <p><a onclick="openForm()">Contact me!</a></p>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <br><br><br><br>
+    
+    <!--About -->
+    <div id="About">
+        <div class="row">
+            <div class="container text-center">
+                <div class="col1">
+                    <h1>About</h1>
+                    <p id="aboutWords">
+                        <br>
+                        <p id="aboutWords">Hello, my name is Ethan LaRocca. I am a software developer.</p>
+                        
+                        <p id="aboutWords">I graduated from an intensive six month bootcamp where I 
+                          was trained in full-stack development, with skills ranging from HTML and JavaScript, 
+                          to Python and C#. During the bootcamp I made several projects to show off my knowledge 
+                          in programming. I also have a month's worth of valuable internship experience in software 
+                          development, and for fun, I have completed some leetcode challenges on the side.</p>
+                        
+                        <p id="aboutWords">I have two long-term goals as a software developer. 
+                          The first is a passion side-project; I am planning to create a visual novel game in my spare time using a Python-based game engine. 
+                          The second is to become a senior-level developer, perhaps working for a company such as Microsoft.</p>
+
+                        <p id="aboutWords">I am fully confident in my programming abilities, and eager to begin work in the field of software development. 
+                          Feel free to <a onclick="openForm()" class="contact">contact me!</a></p>
+                    </p>
+                </div>
+                <div class="col2">
+                    <img src="./assets/images/image1.png" class="mainImages" alt="code wallpaper">
+                </div>
+            </div>
+        </div>
+        <div id="Links" class="row">
+            <div class="container text-center">
+                <div class="col2">
+                    <img src="./assets/images/image2.png" class="mainImages"  alt="python wallpaper"></a>
+                </div>
+                <div class="col1">
+                    <h1>Links</h1>
+                    <div class="col link-cards">
+                      <div class="card" style="width: 18rem;">
+                          <br>
+                          <img src="" target="_blank" class="card-img-top w-25 cardImage" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Resume</h5>
+                            <p class="card-text">My professional resume, listing my experience, education and accomplishments.</p>
+                            <a href="https://github.com/ethantl-1511/" target="_blank" class="btn btn-info">Resume</a>
+                          </div>
+                        </div>
+                  </div>
+                    <div class="col link-cards">
+                        <div class="card" style="width: 18rem;">
+                            <br>
+                            <img src="./assets/images/GitHub-1.png" target="_blank" class="card-img-top w-25 cardImage" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Portfolio</h5>
+                              <p class="card-text">My GitHub account, with several repositories of various programming projects!</p>
+                              <a href="https://github.com/ethantl-1511/" target="_blank" class="btn btn-info">GitHub</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col link-cards">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./assets/images/linkedin.png" class="card-img-top w-25 cardImage" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Social</h5>
+                              <p class="card-text">My professional social media account, feel free to leave me a message!</p>
+                              <a href="https://www.linkedin.com/in/ethan-larocca/" class="btn btn-info">LinkedIn</a>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/mnqrglob" method="post" class="form-container">
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Name..." name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Phone number..." name="phone">
+                <label for="email"><b>Email</b></label>		
+                    <input type="text" placeholder="Email address..." name="email" required>
+                <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Message..." name="message">
+                
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p class="center">&copy; Ethan LaRocca 2022</p>
+    </footer>
+    <script src="./js/portfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
